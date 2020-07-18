@@ -1,9 +1,13 @@
 .all-sort-list {
+    /*position: relative;*/
+    /*float: left;*/
+    /*width: 228px;*/
+    /*border-top: none;*/
+    /*background: #000;*/
+    /*height: 100%;*/
     position: relative;
     float: left;
-    width: 228px;
-    border-top: none;
-    background: #000;
+    width: 138px;
     height: 100%;
 }
 

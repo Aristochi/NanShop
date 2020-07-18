@@ -23,7 +23,7 @@ public enum IndexConfigTypeEnum {
     INDEX_GOODS_HOT(3, "INDEX_GOODS_HOTS"),
     INDEX_GOODS_NEW(4, "INDEX_GOODS_NEW"),
     INDEX_GOODS_RECOMMOND(5, "INDEX_GOODS_RECOMMOND");
-
+//    INDEX_GOODS_ADVERTISEMENT(6,"INDEX_GOODS_Advertisement");
     private int type;
 
     private String name;

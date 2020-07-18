@@ -10,6 +10,7 @@ package com.NanShop.mall.controller.mall;
 
 import com.NanShop.mall.common.Constants;
 import com.NanShop.mall.common.IndexConfigTypeEnum;
+import com.NanShop.mall.controller.vo.AdvertisementVO;
 import com.NanShop.mall.controller.vo.NewBeeMallIndexCarouselVO;
 import com.NanShop.mall.controller.vo.NewBeeMallIndexCategoryVO;
 import com.NanShop.mall.controller.vo.NewBeeMallIndexConfigGoodsVO;
@@ -29,7 +30,8 @@ public class IndexController {
 
     @Resource
     private NewBeeMallCarouselService newBeeMallCarouselService;
-
+//    @Resource
+//    private AdvertisementService advertisementService;
     @Resource
     private NewBeeMallIndexConfigService newBeeMallIndexConfigService;
 
@@ -46,11 +48,14 @@ public class IndexController {
         List<NewBeeMallIndexConfigGoodsVO> hotGoodses = newBeeMallIndexConfigService.getConfigGoodsesForIndex(IndexConfigTypeEnum.INDEX_GOODS_HOT.getType(), Constants.INDEX_GOODS_HOT_NUMBER);
         List<NewBeeMallIndexConfigGoodsVO> newGoodses = newBeeMallIndexConfigService.getConfigGoodsesForIndex(IndexConfigTypeEnum.INDEX_GOODS_NEW.getType(), Constants.INDEX_GOODS_NEW_NUMBER);
         List<NewBeeMallIndexConfigGoodsVO> recommendGoodses = newBeeMallIndexConfigService.getConfigGoodsesForIndex(IndexConfigTypeEnum.INDEX_GOODS_RECOMMOND.getType(), Constants.INDEX_GOODS_RECOMMOND_NUMBER);
+//        List<AdvertisementVO> advertisements = advertisementService.getAdvertisementsForIndex(Constants.INDEX_GOODS_ADVERTISEMENT_NUMBER);
+
         request.setAttribute("categories", categories);//分类数据
         request.setAttribute("carousels", carousels);//轮播图
         request.setAttribute("hotGoodses", hotGoodses);//热销商品
         request.setAttribute("newGoodses", newGoodses);//新品
         request.setAttribute("recommendGoodses", recommendGoodses);//推荐商品
+//        request.setAttribute("advertisements",advertisements);//轮播下的广告
         return "mall/index";
     }
 }
