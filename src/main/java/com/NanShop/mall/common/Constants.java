@@ -8,7 +8,7 @@ public class Constants {
 
     public final static int INDEX_CAROUSEL_NUMBER = 5;//首页轮播图数量(可根据自身需求修改)
 
-    public final static int INDEX_CATEGORY_NUMBER = 10;//首页一级分类的最大数量
+    public final static int INDEX_CATEGORY_NUMBER = 11;//首页一级分类的最大数量
 
     public final static int SEARCH_CATEGORY_NUMBER = 8;//搜索页一级分类的最大数量
 

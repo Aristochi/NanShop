@@ -1,4 +1,4 @@
-<!-- Copyright (c) 2019-2020 十三 all rights reserved. -->
+
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head th:replace="mall/header::head-fragment('NanShop-首页','index')">
@@ -130,7 +130,7 @@
                                     <p class="tips" th:text="${newGoods.goodsIntro}">
                                     </p>
                                     <p class="price" >
-                                        <span class="num">¥<th:block th:text="${newGoods.sellingPrice}"></th:block></span>元
+                                        <span class="num"><th:block th:text="${newGoods.sellingPrice}"></th:block></span>元
                                     </p>
 
                                 </li>
@@ -160,22 +160,6 @@
                                     <p class="name">15.6" i3笔记本</p>
                                     <p class="discount">纤薄机身 金属材质</p>
                                     <p class="price">3099元起</p>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="##">
-                                    <img src="./mall/image/sub_banner/air.jpg" alt=""/>
-                                    <p class="name">空气净化器</p>
-                                    <p class="discount">大空间 快循环</p>
-                                    <p class="price">1099元起</p>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="##">
-                                    <img src="./mall/image/sub_banner/baby-car.jpg" alt=""/>
-                                    <p class="name">折叠婴儿推车</p>
-                                    <p class="discount">出发去向往的地方</p>
-                                    <p class="price">649元起</p>
                                 </a>
                             </li>
                         </th:block>
@@ -210,11 +194,11 @@
                             </div>
                             <img th:src="@{${recommendGoods.goodsCoverImg}}" th:alt="${recommendGoods.goodsName}">
                             <p class="name" th:text="${recommendGoods.goodsName}">NanShopMall</p>
-                            <p class="item_price" th:text="${recommendGoods.sellingPrice}">NanShopMall</p>
+                            <p class="item_price" ><th:block th:text="${recommendGoods.sellingPrice}"></th:block>元起</p>
                             <p class="counter">猜你喜欢</p>
                             <div class="comment">
-                                <p>新蜂精选</p>
-                                <p>好物也可以不贵</p>
+                                <p>精挑细选</p>
+                                <p>心动不如行动</p>
                             </div>
                         </a>
                     </li>

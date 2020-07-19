@@ -23,19 +23,19 @@
     <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
         select
         <include refid="Base_Column_List"/>
-        from tb_newbee_mall_order
+        from nanshop_mall_order
         where order_id = #{orderId,jdbcType=BIGINT}
     </select>
     <select id="selectByOrderNo" parameterType="java.lang.String" resultMap="BaseResultMap">
         select
         <include refid="Base_Column_List"/>
-        from tb_newbee_mall_order
+        from nanshop_mall_order
         where order_no = #{orderNo,jdbcType=VARCHAR} and is_deleted=0 limit 1
     </select>
     <select id="selectByPrimaryKeys" resultMap="BaseResultMap">
         select
         <include refid="Base_Column_List"/>
-        from tb_newbee_mall_order
+        from nanshop_mall_order
         where order_id in
         <foreach collection="orderIds" item="item" index="index"
                  open="(" separator="," close=")">#{item}
@@ -44,7 +44,7 @@
     <select id="findNanShopMallOrderList" parameterType="Map" resultMap="BaseResultMap">
         select
         <include refid="Base_Column_List"/>
-        from tb_newbee_mall_order
+        from nanshop_mall_order
         <where>
             <if test="orderNo!=null and orderNo!=''">
                 and order_no = #{orderNo}
@@ -75,7 +75,7 @@
     </select>
 
     <select id="getTotalNanShopMallOrders" parameterType="Map" resultType="int">
-        select count(*) from tb_newbee_mall_order
+        select count(*) from nanshop_mall_order
         <where>
             <if test="orderNo!=null and orderNo!=''">
                 and order_no = #{orderNo}
@@ -101,11 +101,11 @@
         </where>
     </select>
     <update id="deleteByPrimaryKey" parameterType="java.lang.Long">
-    update tb_newbee_mall_order set is_deleted=1
+    update nanshop_mall_order set is_deleted=1
     where order_id = #{orderId,jdbcType=BIGINT} and is_deleted=0
   </update>
     <insert id="insert" parameterType="com.NanShop.mall.entity.NanShopMallOrder">
-    insert into tb_newbee_mall_order (order_id, order_no, user_id, 
+    insert into nanshop_mall_order (order_id, order_no, user_id, 
       total_price, pay_status, pay_type, 
       pay_time, order_status, extra_info, 
       user_address,is_deleted, create_time, update_time
@@ -118,7 +118,7 @@
   </insert>
     <insert id="insertSelective" useGeneratedKeys="true" keyProperty="orderId"
             parameterType="com.NanShop.mall.entity.NanShopMallOrder">
-        insert into tb_newbee_mall_order
+        insert into nanshop_mall_order
         <trim prefix="(" suffix=")" suffixOverrides=",">
             <if test="orderId != null">
                 order_id,
@@ -203,7 +203,7 @@
         </trim>
     </insert>
     <update id="checkDone">
-        update tb_newbee_mall_order
+        update nanshop_mall_order
         set order_status = 2,update_time = now()
         where order_id in
         <foreach collection="orderIds" item="item" index="index"
@@ -211,7 +211,7 @@
         </foreach>
     </update>
     <update id="checkOut">
-        update tb_newbee_mall_order
+        update nanshop_mall_order
         set order_status = 3,update_time = now()
         where order_id in
         <foreach collection="orderIds" item="item" index="index"
@@ -219,7 +219,7 @@
         </foreach>
     </update>
     <update id="closeOrder">
-        update tb_newbee_mall_order
+        update nanshop_mall_order
         set order_status = #{orderStatus},update_time = now()
         where order_id in
         <foreach collection="orderIds" item="item" index="index"
@@ -227,7 +227,7 @@
         </foreach>
     </update>
     <update id="updateByPrimaryKeySelective" parameterType="com.NanShop.mall.entity.NanShopMallOrder">
-        update tb_newbee_mall_order
+        update nanshop_mall_order
         <set>
             <if test="orderNo != null">
                 order_no = #{orderNo,jdbcType=VARCHAR},
@@ -269,7 +269,7 @@
         where order_id = #{orderId,jdbcType=BIGINT}
     </update>
     <update id="updateByPrimaryKey" parameterType="com.NanShop.mall.entity.NanShopMallOrder">
-    update tb_newbee_mall_order
+    update nanshop_mall_order
     set order_no = #{orderNo,jdbcType=VARCHAR},
       user_id = #{userId,jdbcType=BIGINT},
       total_price = #{totalPrice,jdbcType=INTEGER},

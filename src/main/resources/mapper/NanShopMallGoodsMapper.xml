@@ -31,7 +31,7 @@
   </sql>
 
     <insert id="batchInsert">
-        INSERT INTO tb_newbee_mall_goods_info(goods_name, goods_intro, goods_category_id,goods_cover_img,
+        INSERT INTO nanshop_mall_goods_info(goods_name, goods_intro, goods_category_id,goods_cover_img,
         goods_carousel,
         goods_detail_content,original_price,
         selling_price, stock_num)
@@ -45,17 +45,17 @@
         <include refid="Base_Column_List"/>
         ,
         <include refid="Blob_Column_List"/>
-        from tb_newbee_mall_goods_info
+        from nanshop_mall_goods_info
         where goods_id = #{goodsId,jdbcType=BIGINT}
     </select>
     <update id="updateStockNum">
         <foreach collection="stockNumDTOS" item="stockNumDTO">
-            update tb_newbee_mall_goods_info set stock_num = stock_num-#{stockNumDTO.goodsCount}
+            update nanshop_mall_goods_info set stock_num = stock_num-#{stockNumDTO.goodsCount}
             where goods_id = #{stockNumDTO.goodsId} and stock_num>=#{stockNumDTO.goodsCount} and goods_sell_status = 0;
         </foreach>
     </update>
     <update id="batchUpdateSellStatus">
-        update tb_newbee_mall_goods_info
+        update nanshop_mall_goods_info
         set goods_sell_status=#{sellStatus},update_time=now() where goods_id in
         <foreach item="id" collection="orderIds" open="(" separator="," close=")">
             #{id}
@@ -64,7 +64,7 @@
     <select id="findNanShopMallGoodsList" parameterType="Map" resultMap="BaseResultMap">
         select
         <include refid="Base_Column_List"/>
-        from tb_newbee_mall_goods_info
+        from nanshop_mall_goods_info
         <where>
             <if test="goodsName!=null and goodsName!=''">
                 and goods_name like CONCAT('%','#{goodsName}','%')
@@ -88,7 +88,7 @@
     <select id="findNanShopMallGoodsListBySearch" parameterType="Map" resultMap="BaseResultMap">
         select
         <include refid="Base_Column_List"/>
-        from tb_newbee_mall_goods_info
+        from nanshop_mall_goods_info
         <where>
             <if test="keyword!=null and keyword!=''">
                 and (goods_name like CONCAT('%',#{keyword},'%') or goods_intro like CONCAT('%',#{keyword},'%'))
@@ -122,7 +122,7 @@
     </select>
 
     <select id="getTotalNanShopMallGoodsBySearch" parameterType="Map" resultType="int">
-        select count(*) from tb_newbee_mall_goods_info
+        select count(*) from nanshop_mall_goods_info
         <where>
             <if test="keyword!=null and keyword!=''">
                 and (goods_name like CONCAT('%',#{keyword},'%') or goods_intro like CONCAT('%',#{keyword},'%'))
@@ -139,7 +139,7 @@
     <select id="selectByPrimaryKeys" resultMap="BaseResultMap">
         select
         <include refid="Base_Column_List"/>
-        from tb_newbee_mall_goods_info
+        from nanshop_mall_goods_info
         where goods_id in
         <foreach item="id" collection="list" open="(" separator="," close=")">
             #{id}
@@ -151,7 +151,7 @@
         );
     </select>
     <select id="getTotalNanShopMallGoods" parameterType="Map" resultType="int">
-        select count(*) from tb_newbee_mall_goods_info
+        select count(*) from nanshop_mall_goods_info
         <where>
             <if test="goodsName!=null and goodsName!=''">
                 and goods_name like CONCAT('%','#{goodsName}','%')
@@ -168,11 +168,11 @@
         </where>
     </select>
     <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
-    delete from tb_newbee_mall_goods_info
+    delete from nanshop_mall_goods_info
     where goods_id = #{goodsId,jdbcType=BIGINT}
   </delete>
     <insert id="insert" parameterType="com.NanShop.mall.entity.NanShopMallGoods">
-    insert into tb_newbee_mall_goods_info (goods_id, goods_name, goods_intro, 
+    insert into nanshop_mall_goods_info (goods_id, goods_name, goods_intro, 
       goods_cover_img, goods_carousel, original_price, 
       selling_price, stock_num, tag, 
       goods_sell_status, create_user, create_time, 
@@ -186,7 +186,7 @@
       )
   </insert>
     <insert id="insertSelective" parameterType="com.NanShop.mall.entity.NanShopMallGoods">
-        insert into tb_newbee_mall_goods_info
+        insert into nanshop_mall_goods_info
         <trim prefix="(" suffix=")" suffixOverrides=",">
             <if test="goodsId != null">
                 goods_id,
@@ -289,7 +289,7 @@
         </trim>
     </insert>
     <update id="updateByPrimaryKeySelective" parameterType="com.NanShop.mall.entity.NanShopMallGoods">
-        update tb_newbee_mall_goods_info
+        update nanshop_mall_goods_info
         <set>
             <if test="goodsName != null">
                 goods_name = #{goodsName,jdbcType=VARCHAR},
@@ -340,7 +340,7 @@
         where goods_id = #{goodsId,jdbcType=BIGINT}
     </update>
     <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.NanShop.mall.entity.NanShopMallGoods">
-    update tb_newbee_mall_goods_info
+    update nanshop_mall_goods_info
     set goods_name = #{goodsName,jdbcType=VARCHAR},
       goods_intro = #{goodsIntro,jdbcType=VARCHAR},
       goods_cover_img = #{goodsCoverImg,jdbcType=VARCHAR},
@@ -358,7 +358,7 @@
     where goods_id = #{goodsId,jdbcType=BIGINT}
   </update>
     <update id="updateByPrimaryKey" parameterType="com.NanShop.mall.entity.NanShopMallGoods">
-    update tb_newbee_mall_goods_info
+    update nanshop_mall_goods_info
     set goods_name = #{goodsName,jdbcType=VARCHAR},
       goods_intro = #{goodsIntro,jdbcType=VARCHAR},
       goods_cover_img = #{goodsCoverImg,jdbcType=VARCHAR},

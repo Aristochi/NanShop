@@ -1,4 +1,4 @@
-<!-- Copyright (c) 2019-2020 十三 all rights reserved. -->
+
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head th:fragment="head-fragment(title,path)">
@@ -17,12 +17,12 @@
     <div class="banner_x center">
         <a th:href="@{/index}" class="logo"><h1>NanShpMall</h1></a>
         <ul class="list">
-            <li><a href="##">手机</a></li>
-            <li><a href="##">笔记本</a></li>
-            <li><a href="##">电视</a></li>
-            <li><a href="##">智能硬件</a></li>
-            <li><a href="##">影音</a></li>
-            <li><a href="##">穿戴</a></li>
+            <li><a th:href="@{/search?goodsCategoryId=20}">华为Nova手机</a></li>
+            <li><a th:href="@{/search?goodsCategoryId=20}">MacBook</a></li>
+            <li><a th:href="@{/search?goodsCategoryId=76}">荣耀智慧屏</a></li>
+<!--            <li><a th:href="@{/search?goodsCategoryId=20}">智能硬件</a></li>-->
+<!--            <li><a th:href="@{/search?goodsCategoryId=20}">影音</a></li>-->
+<!--            <li><a th:href="@{/search?goodsCategoryId=20}">穿戴</a></li>-->
         </ul>
         <div class="fr">
             <div class="search">
@@ -42,19 +42,19 @@
             <div class="topbar-nav pull-left">
                 <a class="active" th:href="@{/index}">NanShop</a>
                 <span class="sep">|</span>
-                <a th:href="@{/admin}">后台管理系统</a>
+                <a th:href="@{/admin}">后台管理</a>
                 <span class="sep">|</span>
-                <a href="javascript:;">米聊</a>
+                <a href="javascript:;">NanTalk</a>
                 <span class="sep">|</span>
-                <a href="javascript:;">游戏</a>
+                <a href="javascript:;">NanGame</a>
                 <span class="sep">|</span>
-                <a href="javascript:;">多看阅读</a>
+                <a href="javascript:;">NanReader</a>
                 <span class="sep">|</span>
-                <a href="javascript:;">云服务</a>
+                <a href="javascript:;">AirNan</a>
                 <span class="sep">|</span>
-                <a href="javascript:;">小米网移动版</a>
+                <a href="javascript:;">NanMobile</a>
                 <span class="sep">|</span>
-                <a href="javascript:;">问题反馈</a>
+                <a href="javascript:;">NanCommunication</a>
                 <span class="sep">|</span>
             </div>
 

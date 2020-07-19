@@ -20,7 +20,7 @@
     <select id="findGoodsCategoryList" parameterType="Map" resultMap="BaseResultMap">
         select
         <include refid="Base_Column_List"/>
-        from tb_newbee_mall_goods_category
+        from nanshop_mall_goods_category
         <where>
             <if test="categoryLevel!=null and categoryLevel!=''">
                 and category_level = #{categoryLevel}
@@ -36,7 +36,7 @@
         </if>
     </select>
     <select id="getTotalGoodsCategories" parameterType="Map" resultType="int">
-        select count(*) from tb_newbee_mall_goods_category
+        select count(*) from nanshop_mall_goods_category
         <where>
             <if test="categoryLevel!=null and categoryLevel!=''">
                 and category_level = #{categoryLevel}
@@ -50,20 +50,20 @@
     <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
         select
         <include refid="Base_Column_List"/>
-        from tb_newbee_mall_goods_category
+        from nanshop_mall_goods_category
         where category_id = #{categoryId,jdbcType=BIGINT} and is_deleted=0
     </select>
     <select id="selectByLevelAndName" resultMap="BaseResultMap">
         select
         <include refid="Base_Column_List"/>
-        from tb_newbee_mall_goods_category
+        from nanshop_mall_goods_category
         where category_name = #{categoryName,jdbcType=VARCHAR} and category_level = #{categoryLevel,jdbcType=TINYINT}
         and is_deleted = 0 limit 1
     </select>
     <select id="selectByLevelAndParentIdsAndNumber" resultMap="BaseResultMap">
         select
         <include refid="Base_Column_List"/>
-        from tb_newbee_mall_goods_category
+        from nanshop_mall_goods_category
         where parent_id in
         <foreach item="parentId" collection="parentIds" open="(" separator="," close=")">
             #{parentId,jdbcType=BIGINT}
@@ -76,18 +76,18 @@
         </if>
     </select>
     <update id="deleteByPrimaryKey" parameterType="java.lang.Long">
-    update tb_newbee_mall_goods_category set is_deleted=1
+    update nanshop_mall_goods_category set is_deleted=1
     where category_id = #{categoryId,jdbcType=BIGINT} and is_deleted=0
   </update>
     <update id="deleteBatch">
-        update tb_newbee_mall_goods_category
+        update nanshop_mall_goods_category
         set is_deleted=1 where category_id in
         <foreach item="id" collection="array" open="(" separator="," close=")">
             #{id}
         </foreach>
     </update>
     <insert id="insert" parameterType="com.NanShop.mall.entity.GoodsCategory">
-    insert into tb_newbee_mall_goods_category (category_id, category_level, parent_id, 
+    insert into nanshop_mall_goods_category (category_id, category_level, parent_id,
       category_name, category_rank, is_deleted, 
       create_time, create_user, update_time, 
       update_user)
@@ -97,7 +97,7 @@
       #{updateUser,jdbcType=INTEGER})
   </insert>
     <insert id="insertSelective" parameterType="com.NanShop.mall.entity.GoodsCategory">
-        insert into tb_newbee_mall_goods_category
+        insert into nanshop_mall_goods_category
         <trim prefix="(" suffix=")" suffixOverrides=",">
             <if test="categoryId != null">
                 category_id,
@@ -164,7 +164,7 @@
         </trim>
     </insert>
     <update id="updateByPrimaryKeySelective" parameterType="com.NanShop.mall.entity.GoodsCategory">
-        update tb_newbee_mall_goods_category
+        update nanshop_mall_goods_category
         <set>
             <if test="categoryLevel != null">
                 category_level = #{categoryLevel,jdbcType=TINYINT},
@@ -197,7 +197,7 @@
         where category_id = #{categoryId,jdbcType=BIGINT}
     </update>
     <update id="updateByPrimaryKey" parameterType="com.NanShop.mall.entity.GoodsCategory">
-    update tb_newbee_mall_goods_category
+    update nanshop_mall_goods_category
     set category_level = #{categoryLevel,jdbcType=TINYINT},
       parent_id = #{parentId,jdbcType=BIGINT},
       category_name = #{categoryName,jdbcType=VARCHAR},
