@@ -1,4 +1,4 @@
-var newbeeSwiper = new Swiper('.swiper-container', {
+var nanShopSwiper = new Swiper('.swiper-container', {
     //设置自动播放
     autoplay: {
         delay: 2000,

@@ -1,7 +1,11 @@
 <!-- Copyright (c) 2019-2020 十三 all rights reserved. -->
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head th:replace="mall/header::head-fragment('NewBee商城-订单结算','order-detail')">
+<head th:replace="mall/header::head-fragment('NanShop-订单结算','order-detail')">
+    <title>结算</title>
+
+    <link rel="stylesheet" th:href="@{/mall/styles/style.css}">
+    <link rel="stylesheet" th:href="@{/mall/styles/reset.css}">
 </head>
 <link th:href="@{/mall/css/bootstrap-modal.css}" rel="stylesheet">
 <body>
@@ -73,7 +77,7 @@
                                             <td class="col col-name">
                                                 <p class="name">
                                                     <a target="_blank" th:href="@{'/goods/detail/'+${item.goodsId}}"
-                                                       th:text="${item.goodsName}">newbee</a>
+                                                       th:text="${item.goodsName}">NanShop</a>
                                                 </p>
                                             </td>
                                             <td class="col col-price"><p class="price"
@@ -93,8 +97,8 @@
                                     <tr>
                                         <th>收货地址：</th>
                                         <td class="user_address_label"
-                                            th:text="${session.newBeeMallUser.address==''?'无':session.newBeeMallUser.address}">
-                                            newbee
+                                            th:text="${session.nanShopMallUser.address==''?'无':session.nanShopMallUser.address}">
+                                            NanShop
                                         </td>
                                     </tr>
                                     </tbody>
@@ -153,10 +157,10 @@
                     <div class="modal-body">
                         <form id="personalInfoForm">
                             <div class="form-group">
-                                <input type="hidden" id="userId" th:value="${session.newBeeMallUser.userId}">
+                                <input type="hidden" id="userId" th:value="${session.nanShopMallUser.userId}">
                                 <label for="address" class="control-label">收货地址:</label>
                                 <input type="text" class="form-control" id="address" name="address"
-                                       placeholder="请输入收货地址" th:value="${session.newBeeMallUser.address}"
+                                       placeholder="请输入收货地址" th:value="${session.nanShopMallUser.address}"
                                        required="true">
                             </div>
                         </form>
@@ -174,7 +178,7 @@
 
 
 <div th:replace="mall/footer::footer-fragment"></div>
-
+</body>
 <!-- jQuery -->
 <script th:src="@{/admin/plugins/jquery/jquery.min.js}"></script>
 <script th:src="@{/mall/js/search.js}" type="text/javascript"></script>
@@ -235,5 +239,5 @@
         });
     });
 </script>
-</body>
+
 </html>

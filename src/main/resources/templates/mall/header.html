@@ -17,12 +17,12 @@
     <div class="banner_x center">
         <a th:href="@{/index}" class="logo"><h1>NanShpMall</h1></a>
         <ul class="list">
-            <li><a href="##">xxxx</a></li>
-            <li><a href="##">xxxx</a></li>
-            <li><a href="##">xxxx</a></li>
-            <li><a href="##">xxxx</a></li>
-            <li><a href="##">xxxx</a></li>
-            <li><a href="##">xxxx</a></li>
+            <li><a href="##">手机</a></li>
+            <li><a href="##">笔记本</a></li>
+            <li><a href="##">电视</a></li>
+            <li><a href="##">智能硬件</a></li>
+            <li><a href="##">影音</a></li>
+            <li><a href="##">穿戴</a></li>
         </ul>
         <div class="fr">
             <div class="search">
@@ -60,11 +60,11 @@
 
 
 
-            <th:block th:unless="${session.newBeeMallUser==null}">
+            <th:block th:unless="${session.nanShopMallUser==null}">
                 <div class="topbar-user pull-right">
                     <span class="sep">|</span>
                     <a th:href="@{/personal}">
-                        <th:block th:text="${session.newBeeMallUser.nickName}"></th:block>
+                        <th:block th:text="${session.nanShopMallUser.nickName}"></th:block>
                     </a>
                     <span class="sep">|</span>
                     <a th:href="@{/orders}">
@@ -79,13 +79,13 @@
                 <div class="topbar-cart pull-right">
                             <a th:href="@{/shop-cart}" style="color: white;"><i class="iconfont icon-cart"></i>
                                 购物车(
-                                <th:block th:text="${session.newBeeMallUser.shopCartItemCount}"></th:block>
+                                <th:block th:text="${session.nanShopMallUser.shopCartItemCount}"></th:block>
                                 )</a>
                         </div>
                     </th:block>
 
 
-            <th:block th:if="${session.newBeeMallUser==null}">
+            <th:block th:if="${session.nanShopMallUser==null}">
 
                 <!--登入、注册-->
                 <div class="topbar-user pull-right">
@@ -96,7 +96,7 @@
 
                 </div>
                 <div class="topbar-cart pull-right">
-                    <a th:href="@{/index}">
+                    <a th:href="@{/login}">
                         <i class="iconfont icon-cart"></i>
                         购物车(<span>0</span>)
                     </a>

@@ -65,17 +65,17 @@ body {
 }
 
 .form .login .login_center .login_top .right a {
-    color: #1baeae;
+    color: #ff6700;
     font-weight: bold;
 }
 
 .form .login .login_center .login_top .right a:hover {
-    color: #1baeae;
+    color: #ff6700;
 }
 
 .form .login .login_center .login_top .under-line {
     height: 2px;
-    background: #1baeae;
+    background: #ff6700;
     margin: 8px 0;
 }
 
@@ -84,7 +84,7 @@ body {
 }
 
 .form .login .login_center .login_main input:focus {
-    border: 1px solid #1baeae;
+    border: 1px solid #ff6700;
 }
 
 .form .login .login_center .login-info {
@@ -118,7 +118,7 @@ body {
     width: 240px;
     height: 45px;
     margin-left: 55px;
-    background: #1baeae;
+    background: #ff6700;
     color: #fff;
     font-size: 20px;
     font-weight: bold;

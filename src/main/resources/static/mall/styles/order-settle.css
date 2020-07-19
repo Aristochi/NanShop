@@ -1,7 +1,7 @@
 .order-header {
   position: relative;
 }
-.order-header .newbee-mall-logo {
+.order-header .nanShop-mall-logo {
   width: 100px;
   height: 85px;
   margin: 20px 360px;
@@ -38,7 +38,7 @@
   font-weight: 600;
 }
 .section .top-2 span:last-child {
-  color: #1baeae;
+  color: #ff6700;
 }
 .section .top-3 {
   width: 600px;
@@ -50,7 +50,7 @@
 .section .top-3 p {
   width: 135px;
   height: 27px;
-  border: 1px solid #1baeae;
+  border: 1px solid #ff6700;
   line-height: 27px;
   font-size: 12px;
   text-align: center;
@@ -105,7 +105,7 @@
 .section .top-6 p:last-child span {
   width: 15px;
   height: 15px;
-  background: #1baeae;
+  background: #ff6700;
   color: #fff;
   font-size: 10px;
   line-height: 15px;
@@ -148,7 +148,7 @@
 .section .order-item .to_left .box {
   width: 135px;
   height: 27px;
-  border: 2px solid #1baeae;
+  border: 2px solid #ff6700;
   line-height: 27px;
   font-size: 12px;
   text-align: center;
@@ -242,7 +242,7 @@
 }
 .section .order-item .to_right div button {
   color: #fffafa;
-  background: #1baeae;
+  background: #ff6700;
   border: none;
   font-size: 12px;
   padding: 1px 2.5px;
@@ -283,7 +283,7 @@
   font-size: 12px;
   font-weight: bold;
   margin-left: 400px;
-  color: #1baeae;
+  color: #ff6700;
 }
 .section .order-item .to_right img {
   float: left;
@@ -321,7 +321,7 @@
 }
 .section .settle_content .yfze .yfze_a .hq {
   font-size: 20px;
-  color: #1baeae;
+  color: #ff6700;
   margin-left: 44px;
 }
 .section .settle_content .yfze .yfze_b {
@@ -334,7 +334,7 @@
   margin-left: 900px;
   margin-top: 10px;
   text-align: center;
-  background: #1baeae;
+  background: #ff6700;
   border: none;
   color: #fff;
   font-size: 20px;

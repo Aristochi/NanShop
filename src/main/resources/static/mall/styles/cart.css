@@ -38,7 +38,7 @@
   position: relative;
 }
 #cart .banner_x .dlzc .user:hover .username {
-  color: #1baeae;
+  color: #ff6700;
   background-color: #fff;
 }
 #cart .banner_x .dlzc .user:hover .selector {
@@ -71,7 +71,7 @@
   height: 30px;
 }
 #cart .banner_x .dlzc .user .selector li:hover a {
-  color: #1baeae;
+  color: #ff6700;
   background-color: #fafafa;
 }
 #cart .banner_x .dlzc .user .selector li a {
@@ -103,7 +103,7 @@
 #cart .cart_line {
   width: 100%;
   height: 2px;
-  background: #1baeae;
+  background: #ff6700;
 }
 #cart .cart_bg {
   width: 100%;
@@ -192,7 +192,7 @@
 }
 #cart .cart_bg .list .content2 .sub_content:nth-of-type(6) {
   margin-left: 115px;
-  color: #1baeae;
+  color: #ff6700;
 }
 #cart .cart_bg .list .content2 .sub_content:nth-of-type(7) {
   margin-left: 145px;
@@ -204,7 +204,7 @@
   border: 1px solid #ececec;
   text-align: center;
   font-size: 14px;
-  color: #1baeae;
+  color: #ff6700;
 }
 #cart .cart_bg .list .content2 .sub_content a {
   display: block;
@@ -214,7 +214,7 @@
   color: #000;
 }
 #cart .cart_bg .list .content2 .sub_content a:hover {
-  color: #1baeae;
+  color: #ff6700;
 }
 #cart .cart_bg .list .sub_content .white_d {
   width: 18px;
@@ -243,11 +243,11 @@
   color: #666;
 }
 #cart .cart_bg .pre_order .tips ul li a:hover {
-  color: #1baeae;
+  color: #ff6700;
 }
 #cart .cart_bg .pre_order .tips ul li span {
   display: inline-block;
-  color: #1baeae;
+  color: #ff6700;
   margin: 0 4px;
 }
 #cart .cart_bg .pre_order .order_div {
@@ -255,7 +255,7 @@
   height: 50px;
   line-height: 50px;
   font-size: 14px;
-  color: #1baeae;
+  color: #ff6700;
 }
 #cart .cart_bg .pre_order .order_div .order_total span {
   font-size: 24px;
@@ -265,13 +265,15 @@
   width: 200px;
   height: 50px;
   color: #fff;
-  background: #1baeae;
+  text-align: center;
+  background: #ff6700;
   font-size: 20px;
   border: none;
   cursor: pointer;
 }
 #cart .cart_bg .pre_order .order_div .order_button .order_button_d:hover {
-  background: #1bd1d1;
+  background: deepskyblue;
+
 }
 
 #cart .cart_bg .pre_order .order_div .order_button .order_button_c {

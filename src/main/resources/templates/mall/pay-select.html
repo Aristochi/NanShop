@@ -1,7 +1,7 @@
 <!-- Copyright (c) 2019-2020 十三 all rights reserved. -->
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head th:replace="mall/header::head-fragment('NewBee商城-选择支付方式','pay-select')">
+<head th:replace="mall/header::head-fragment('NanShop商城-选择支付方式','pay-select')">
 </head>
 <body>
 <div class="page-main">
@@ -10,7 +10,7 @@
             <div class="section section-order">
                 <div class="order-info clearfix">
                     <div class="fl">
-                        <h2 class="title">订单提交成功！去付款咯～</h2>
+                        <h2 class="title">订单提交成功！请尽快付款～</h2>
                         <input type="hidden" id="orderNoValue" th:value="${orderNo}">
                         <p class="order-time" id="J_deliverDesc">订单号：
                             <th:block th:text="${orderNo}"></th:block>

@@ -40,7 +40,7 @@
   left: 0;
   width: 400px;
   padding: 10px 0;
-  border: 1px solid #1baeae;
+  border: 1px solid #ff6700;
   background: #fff;
   z-index: 20;
   display: none;
@@ -54,14 +54,14 @@
 }
 .classify .category .category_bar .c div a:hover,
 .classify .category .category_bar .b div a:hover {
-  color: #1baeae;
+  color: #ff6700;
 }
 .classify .category .category_bar .b:hover .qqq {
-  border: 1px solid #1baeae;
+  border: 1px solid #ff6700;
   border-bottom: 1px solid #fff;
 }
 .classify .category .category_bar .c:hover .qqq {
-  border: 1px solid #1baeae;
+  border: 1px solid #ff6700;
   border-bottom: 1px solid #fff;
 }
 .classify .category .category_bar .a {
@@ -105,10 +105,10 @@
   border-left: 0;
 }
 .sort .list div:hover {
-  color: #1baeae;
+  color: #ff6700;
 }
 .sort .list .active {
-  color: #1baeae;
+  color: #ff6700;
 }
 .goods_item .main {
   width: 1226px;
@@ -124,7 +124,7 @@
   margin-left: 2px;
 }
 .goods_item .main .item_card_frame:hover {
-  border-color: #1baeae;
+  border-color: #ff6700;
 }
 .goods_item .main .item_card_frame .item_card {
   padding: 37px;
@@ -167,7 +167,7 @@
 .goods_item .main .item_card_frame .item_price {
   font-size: 14px;
   text-align: center;
-  color: #1baeae;
+  color: #ff6700;
 }
 .goods_item .pages {
   display: flex;
@@ -185,7 +185,7 @@
 }
 .goods_item .pages .page_wrap .page_span1 .active {
   border: 0;
-  color: #1baeae;
+  color: #ff6700;
   background: #fff;
 }
 .goods_item .pages .page_wrap .page_span1 a {

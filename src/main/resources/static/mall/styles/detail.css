@@ -95,7 +95,7 @@
 #detail .intro .right .item_price {
     width: 180px;
     font-size: 18px;
-    color: #1baeae;
+    color: #ff6700;
     height: 100px;
     font-weight: bold;
     float: right;
@@ -117,8 +117,9 @@
 #detail .intro .right .order .car {
     height: 50px;
     width: 156px;
+    text-align: center;
     border: none;
-    background: #1baeae;
+    background: #ff6700;
     color: #fff;
     font-size: 18px;
     cursor: pointer;

@@ -1,21 +1,14 @@
-/**
- * 严肃声明：
- * 开源版本请务必保留此注释头信息，若删除我方将保留所有法律责任追究！
- * 本系统已申请软件著作权，受国家版权局知识产权以及国家计算机软件著作权保护！
- * 可正常分享和学习源码，不得用于违法犯罪活动，违者必究！
- * Copyright (c) 2019-2020 十三 all rights reserved.
- * 版权所有，侵权必究！
- */
+
 package com.NanShop.mall.controller.mall;
 
 import com.NanShop.mall.common.Constants;
 import com.NanShop.mall.common.ServiceResultEnum;
-import com.NanShop.mall.controller.vo.NewBeeMallUserVO;
+import com.NanShop.mall.controller.vo.NanShopMallUserVO;
 import com.NanShop.mall.entity.MallUser;
 import com.NanShop.mall.util.MD5Util;
 import com.NanShop.mall.util.Result;
 import com.NanShop.mall.util.ResultGenerator;
-import com.NanShop.mall.service.NewBeeMallUserService;
+import com.NanShop.mall.service.NanShopMallUserService;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
@@ -28,7 +21,7 @@ import javax.servlet.http.HttpSession;
 public class PersonalController {
 
     @Resource
-    private NewBeeMallUserService newBeeMallUserService;
+    private NanShopMallUserService nanShopMallUserService;
 
     @GetMapping("/personal")
     public String personalPage(HttpServletRequest request,
@@ -78,7 +71,7 @@ public class PersonalController {
             return ResultGenerator.genFailResult(ServiceResultEnum.LOGIN_VERIFY_CODE_ERROR.getResult());
         }
         //todo 清verifyCode
-        String loginResult = newBeeMallUserService.login(loginName, MD5Util.MD5Encode(password, "UTF-8"), httpSession);
+        String loginResult = nanShopMallUserService.login(loginName, MD5Util.MD5Encode(password, "UTF-8"), httpSession);
         //登录成功
         if (ServiceResultEnum.SUCCESS.getResult().equals(loginResult)) {
             return ResultGenerator.genSuccessResult();
@@ -107,7 +100,7 @@ public class PersonalController {
             return ResultGenerator.genFailResult(ServiceResultEnum.LOGIN_VERIFY_CODE_ERROR.getResult());
         }
         //todo 清verifyCode
-        String registerResult = newBeeMallUserService.register(loginName, password);
+        String registerResult = nanShopMallUserService.register(loginName, password);
         //注册成功
         if (ServiceResultEnum.SUCCESS.getResult().equals(registerResult)) {
             return ResultGenerator.genSuccessResult();
@@ -119,7 +112,7 @@ public class PersonalController {
     @PostMapping("/personal/updateInfo")
     @ResponseBody
     public Result updateInfo(@RequestBody MallUser mallUser, HttpSession httpSession) {
-        NewBeeMallUserVO mallUserTemp = newBeeMallUserService.updateUserInfo(mallUser,httpSession);
+        NanShopMallUserVO mallUserTemp = nanShopMallUserService.updateUserInfo(mallUser,httpSession);
         if (mallUserTemp == null) {
             Result result = ResultGenerator.genFailResult("修改失败");
             return result;

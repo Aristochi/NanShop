@@ -3,20 +3,22 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>NewBee商城-购物车</title>
+    <title>NanShop-购物车</title>
     <link rel="stylesheet" th:href="@{mall/css/iconfont.css}">
     <link rel="stylesheet" th:href="@{mall/css/common.css}">
     <link rel="stylesheet" th:href="@{mall/styles/header.css}">
     <link rel="stylesheet" th:href="@{mall/styles/cart.css}">
+    <link rel="stylesheet" th:href="@{/mall/styles/style.css}">
+    <link rel="stylesheet" th:href="@{/mall/styles/reset.css}">
     <link rel="stylesheet" th:href="@{/admin/plugins/sweetalert/sweetalert.css}"/>
 </head>
 <body>
-
+<header th:replace="mall/header::header-fragment"></header>
 <div id="cart">
     <div class="banner_x center">
         <a th:href="@{/index}" target="_blank">
             <div class="logo fl">
-                <img src="mall/image/new-bee-logo-3.png"/>
+                <img src="mall/image/new-nanshop-logo-3.png"/>
             </div>
         </a>
 
@@ -28,8 +30,10 @@
     <div class="cart_bg">
         <th:block th:if="${#lists.isEmpty(myShoppingCartItems)}">
             <div class="list center">
-                <!-- todo 无购物项时 换背景图 -->
-                无数据
+                <div style="text-align: center">
+                <h3>购物车空空如也~</h3>
+                <h2><a th:href="@{/index}">快去选购吧</a></h2>
+                </div>
             </div>
         </th:block>
         <th:block th:unless="${#lists.isEmpty(myShoppingCartItems)}">

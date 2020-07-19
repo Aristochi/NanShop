@@ -2,13 +2,13 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head th:replace="mall/header::head-fragment('NanShop-首页','index')">
-</head>
+    <title>Nanshop 首页</title></head>
 <body>
 <header th:replace="mall/header::header-fragment"></header>
 <content id="content" class="container" >
     <nav th:replace="mall/header::nav-fragment"></nav>
     <div id="banner">
-        <div class="all-sort-list" style="background-color: dimgrey">
+        <div class="all-sort-list">
             <th:block th:each="category : ${categories}">
             <div class="item">
                 <h3><span></span><a href="##"><th:block th:text="${category.categoryName}"></th:block></a></h3>
@@ -209,8 +209,8 @@
                                 新品
                             </div>
                             <img th:src="@{${recommendGoods.goodsCoverImg}}" th:alt="${recommendGoods.goodsName}">
-                            <p class="name" th:text="${recommendGoods.goodsName}">NewBeeMall</p>
-                            <p class="item_price" th:text="${recommendGoods.sellingPrice}">NewBeeMall</p>
+                            <p class="name" th:text="${recommendGoods.goodsName}">NanShopMall</p>
+                            <p class="item_price" th:text="${recommendGoods.sellingPrice}">NanShopMall</p>
                             <p class="counter">猜你喜欢</p>
                             <div class="comment">
                                 <p>新蜂精选</p>

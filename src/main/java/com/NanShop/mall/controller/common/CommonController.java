@@ -1,11 +1,4 @@
-/**
- * 严肃声明：
- * 开源版本请务必保留此注释头信息，若删除我方将保留所有法律责任追究！
- * 本系统已申请软件著作权，受国家版权局知识产权以及国家计算机软件著作权保护！
- * 可正常分享和学习源码，不得用于违法犯罪活动，违者必究！
- * Copyright (c) 2019-2020 十三 all rights reserved.
- * 版权所有，侵权必究！
- */
+
 package com.NanShop.mall.controller.common;
 
 import com.NanShop.mall.common.Constants;
@@ -24,10 +17,7 @@ import java.io.ByteArrayOutputStream;
 import java.util.Properties;
 
 /**
- * @author 13
- * @qq交流群 796794009
- * @email 2449207463@qq.com
- * @link https://github.com/newbee-ltd
+
  */
 @Controller
 public class CommonController {
@@ -65,14 +55,19 @@ public class CommonController {
         com.google.code.kaptcha.impl.DefaultKaptcha newBeeMallLoginKaptcha = new com.google.code.kaptcha.impl.DefaultKaptcha();
         Properties properties = new Properties();
         properties.put("kaptcha.border", "no");
-        properties.put("kaptcha.textproducer.font.color", "27,174,171");
-        properties.put("kaptcha.noise.color", "20,33,42");
-        properties.put("kaptcha.textproducer.font.size", "30");
+        // 验证码字体颜色
+        properties.put("kaptcha.textproducer.font.color", "red");
+//        properties.put("kaptcha.textproducer.font.color", "27,174,171");
+//        properties.put("kaptcha.noise.color", "20,33,42");
+        properties.put("kaptcha.textproducer.font.size", "40");
         properties.put("kaptcha.image.width", "110");
         properties.put("kaptcha.image.height", "40");
         properties.put("kaptcha.session.key", Constants.MALL_VERIFY_CODE_KEY);
-        properties.put("kaptcha.textproducer.char.space", "2");
-        properties.put("kaptcha.textproducer.char.length", "6");
+//        properties.put("kaptcha.textproducer.char.space", "3");
+        properties.put("kaptcha.textproducer.font.names", "宋体,楷体,微软雅黑");
+        properties.put("kaptcha.textproducer.char.space", "4");
+//        properties.put("kaptcha.textproducer.char.string","0123456789ABCEFGHIJKLMNOPQRSTUVWXYZ");
+        properties.put("kaptcha.textproducer.char.length", "4");
         Config config = new Config(properties);
         newBeeMallLoginKaptcha.setConfig(config);
         byte[] captchaOutputStream = null;

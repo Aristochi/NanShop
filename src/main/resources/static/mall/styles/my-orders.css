@@ -34,7 +34,7 @@
 }
 
 #personal .self-info .lfnav .title_list ul li .active {
-    color: #1baeae;
+    color: #ff6700;
     font-weight: bold;
 }
 
@@ -105,7 +105,7 @@
 }
 
 #personal .self-info .intro .info_item span a:hover {
-    color: #1baeae;
+    color: #ff6700;
 }
 
 .uc-main-box {
@@ -152,11 +152,11 @@
 }
 
 .uc-content-box .box-hd .filter-list li.tab-active, .uc-content-box .box-hd .filter-list li.active {
-    color: #1baeae;
+    color: #ff6700;
 }
 
 .box-hd .filter-list li.active a {
-    color: #1baeae;
+    color: #ff6700;
 }
 
 .uc-content-box .box-hd .filter-list li {
@@ -257,7 +257,7 @@
 }
 
 .uc-order-item-list .order-status-need-pay {
-    color: #1baeae;
+    color: #ff6700;
 }
 
 .uc-order-item-list .order-status-success {
@@ -399,7 +399,7 @@ a {
 .btn-line-pay {
     border-color: #b0b0b0;
     background: #fff;
-    color: #1baeae;
+    color: #ff6700;
 }
 
 .btn-small {
@@ -409,13 +409,13 @@ a {
     line-height: 28px;
 }
 
-.newbee-pagenavi {
+.nanShop-pagenavi {
     height: 30px;
     padding: 15px 0;
     text-align: center;
 }
 
-.newbee-pagenavi .numbers {
+.nanShop-pagenavi .numbers {
     display: inline-block;
     *zoom: 1;
     *display: inline;
@@ -429,22 +429,22 @@ a {
     color: #b0b0b0;
 }
 
-.newbee-pagenavi .iconfont {
+.nanShop-pagenavi .iconfont {
     font-size: 24px;
     vertical-align: bottom;
 }
 
-.newbee-pagenavi .current {
+.nanShop-pagenavi .current {
     background-color: #757575;
     color: #fff;
 }
 
-.newbee-pagenavi a.numbers {
+.nanShop-pagenavi a.numbers {
     -webkit-transition: all .2s linear;
     transition: all .2s linear
 }
 
-.newbee-pagenavi a.numbers:hover {
+.nanShop-pagenavi a.numbers:hover {
     background: #b0b0b0;
     color: #fff
 }

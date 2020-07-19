@@ -1,8 +1,8 @@
 <!-- Copyright (c) 2019-2020 十三 all rights reserved. -->
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head th:replace="mall/header::head-fragment('NewBee商城-商品详情','detail')">
-</head>
+<head th:replace="mall/header::head-fragment('NanShop商城-商品详情','detail')">
+    <title>商品详情</title></head>
 <body>
 <header th:replace="mall/header::header-fragment"></header>
 
@@ -28,12 +28,12 @@
     <div class="intro mt20 w clearfix">
         <div class="left fl" style="position: relative;">
             <div class="swiper-container fl">
-                <img th:src="@{${goodsDetail.goodsCoverImg}}">
+                <img th:src="@{${goodsDetail.goodsCoverImg}}" alt="detail">
             </div>
         </div>
         <div class="right fr">
-            <div class="h3 ml20 mt20" th:text="${goodsDetail.goodsName}">NewBeeMall</div>
-            <div class="sub_title mr40 ml20 mt10" th:text="${goodsDetail.goodsIntro}">NewBeeMall</div>
+            <div class="h3 ml20 mt20" th:text="${goodsDetail.goodsName}">NanShopMall</div>
+            <div class="sub_title mr40 ml20 mt10" th:text="${goodsDetail.goodsIntro}">NanShopMall</div>
             <div class="item_price mr40 ml20 mt10">
                 <th:block th:text="${goodsDetail.originalPrice}+'.00 元'"></th:block>
                 <del>
@@ -75,9 +75,6 @@
 <div th:replace="mall/footer::footer-fragment"></div>
 
 <!-- jQuery -->
-<script th:src="@{/admin/plugins/jquery/jquery.min.js}"></script>
-<script th:src="@{/admin/plugins/sweetalert/sweetalert.min.js}"></script>
-<script th:src="@{/mall/js/search.js}" type="text/javascript"></script>
 <script type="text/javascript">
     /**
      * 添加到购物车
@@ -163,5 +160,10 @@
         });
     }
 </script>
+<script th:src="@{/mall/js/detail.js}"></script>
+<script th:src="@{/admin/plugins/jquery/jquery.min.js}"></script>
+<script th:src="@{/admin/plugins/sweetalert/sweetalert.min.js}"></script>
+<script th:src="@{/mall/js/search.js}" type="text/javascript"></script>
+
 </body>
 </html>
