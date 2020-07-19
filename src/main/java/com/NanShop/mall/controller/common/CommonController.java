@@ -56,16 +56,16 @@ public class CommonController {
         Properties properties = new Properties();
         properties.put("kaptcha.border", "no");
         // 验证码字体颜色
-        properties.put("kaptcha.textproducer.font.color", "red");
+        properties.put("kaptcha.textproducer.font.color", "blue");
 //        properties.put("kaptcha.textproducer.font.color", "27,174,171");
 //        properties.put("kaptcha.noise.color", "20,33,42");
-        properties.put("kaptcha.textproducer.font.size", "40");
-        properties.put("kaptcha.image.width", "110");
+        properties.put("kaptcha.textproducer.font.size", "30");
+        properties.put("kaptcha.image.width", "120");
         properties.put("kaptcha.image.height", "40");
         properties.put("kaptcha.session.key", Constants.MALL_VERIFY_CODE_KEY);
 //        properties.put("kaptcha.textproducer.char.space", "3");
-        properties.put("kaptcha.textproducer.font.names", "宋体,楷体,微软雅黑");
-        properties.put("kaptcha.textproducer.char.space", "4");
+//        properties.put("kaptcha.textproducer.font.names", "宋体,楷体,微软雅黑");
+        properties.put("kaptcha.textproducer.char.space", "3");
 //        properties.put("kaptcha.textproducer.char.string","0123456789ABCEFGHIJKLMNOPQRSTUVWXYZ");
         properties.put("kaptcha.textproducer.char.length", "4");
         Config config = new Config(properties);

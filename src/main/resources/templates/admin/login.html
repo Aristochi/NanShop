@@ -29,20 +29,20 @@
         }
     </style>
 </head>
-<body class="hold-transition login-page">
+<body class="hold-transition login-page" >
 <div id="particles">
 </div>
-<div class="login-box">
+<div class="login-box" style="background: white">
     <div class="login-logo" style="color: #1baeae;">
         <a th:href="@{mall/index}">
         <img th:src="@{/admin/dist/img/nanshop-logo-2.png}" style="    height: 58px;float: left;margin-left: 10px;">
         </a>
-        <h1>管理系统登陆</h1>
+        <h1 style="color: black">管理系统登陆</h1>
     </div>
     <!-- /.login-logo -->
     <div class="card">
         <div class="card-body login-card-body">
-            <p class="login-box-msg"> NanSHOP_MALL</p>
+            <p class="login-box-msg"> NanSHOPMALL</p>
             <form th:action="@{/admin/login}" method="post">
                 <div th:if="${not #strings.isEmpty(session.errorMsg)}" class="form-group">
                     <div class="alert alert-danger" th:text="${session.errorMsg}"></div>

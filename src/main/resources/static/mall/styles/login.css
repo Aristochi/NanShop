@@ -1,5 +1,6 @@
 body {
-    background: #14212a;
+    background: whitesmoke;
+    background: url("../image/login_bg.png") no-repeat center center;
 }
 
 .top {
@@ -23,16 +24,16 @@ body {
 .form {
     width: 1130px;
     height: 588px;
-    background: url("../image/login_bg.png") no-repeat center center;
+
 }
 
 .form .login {
     width: 400px;
     height: 470px;
     margin: 30px auto;
-    background: #444;
-    color: #fff;
-    margin-right: 0px;
+    background: white;
+    color: black;
+    margin-right: 0;
     border-radius: 4px;
     font: 12px "宋体", Times New Roman;
 }
@@ -119,7 +120,7 @@ body {
     height: 45px;
     margin-left: 55px;
     background: #ff6700;
-    color: #fff;
+    color: white;
     font-size: 20px;
     font-weight: bold;
     letter-spacing: 2px;

@@ -17,17 +17,17 @@ public class KaptchaConfig {
         // 是否使用边框
         properties.put("kaptcha.border", "no");
         // 验证码字体颜色
-        properties.put("kaptcha.textproducer.font.color", "red");
+        properties.put("kaptcha.textproducer.font.color", "blue");
         // 验证码图片大小
         properties.put("kaptcha.image.width", "160");
         properties.put("kaptcha.image.height", "40");
         // 验证码字体的大小
-        properties.put("kaptcha.textproducer.font.size", "40");
+        properties.put("kaptcha.textproducer.font.size", "30");
         // 验证码保存在session的key
         properties.put("kaptcha.session.key", "verifyCode");
         // 验证码的字体设置
-        properties.put("kaptcha.textproducer.font.names", "宋体,楷体,微软雅黑");
-        properties.put("kaptcha.textproducer.char.space", "4");
+//        properties.put("kaptcha.textproducer.font.names", "宋体,楷体,微软雅黑");
+        properties.put("kaptcha.textproducer.char.space", "3");
 //        properties.put("kaptcha.textproducer.char.string","0123456789ABCEFGHIJKLMNOPQRSTUVWXYZ");
         properties.put("kaptcha.noise.color","black");
         properties.put("kaptcha.background.clear.to","white");
