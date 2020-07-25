@@ -10,7 +10,7 @@
         <span class="brand-text font-weight-light">Mall</span>
     </a>
     <!-- Sidebar -->
-    <div class="sidebar">
+    <div class="sidebar" style="background-color: black;">
         <!-- Sidebar Menu -->
         <nav class="mt-2">
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
@@ -20,25 +20,18 @@
                 <li class="nav-header">NanShop后台管理系统</li>
                 <li class="nav-item">
                     <a th:href="@{/admin/index}" th:class="${path}=='index'?'nav-link active':'nav-link'">
-                        <i class="nav-icon fa fa-dashboard"></i>
+<!--                        <i class="nav-icon fa fa-dashboard"></i>-->
                         <p>
                             NanShopMall
                         </p>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a th:href="@{/admin/goods/edit}" th:class="${path}=='goods-edit'?'nav-link active':'nav-link'">
-                        <i class="nav-icon fa fa-plus"></i>
-                        <p>
-                            商品信息
-                        </p>
-                    </a>
-                </li>
+
                 <li class="nav-header">首页配置</li>
                 <li class="nav-item">
                     <a th:href="@{/admin/carousels}"
                        th:class="${path}=='nanShop_mall_carousel'?'nav-link active':'nav-link'">
-                        <i class="nav-icon fa fa-file-image-o"></i>
+<!--                        <i class="nav-icon fa fa-file-image-o"></i>-->
                         <p>
                             轮播图配置
                         </p>
@@ -56,27 +49,36 @@
                 <li class="nav-item">
                     <a th:href="@{/admin/indexConfigs?configType=3}"
                        th:class="${path}=='INDEX_GOODS_HOTS'?'nav-link active':'nav-link'">
-                        <i class="nav-icon fa fa-hand-o-up"></i>
+<!--                        <i class="nav-icon fa fa-hand-o-up"></i>-->
                         <p>
-                            热销商品配置
+                            明星单品管理
                         </p>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a th:href="@{/admin/indexConfigs?configType=4}"
                        th:class="${path}=='INDEX_GOODS_NEW'?'nav-link active':'nav-link'">
-                        <i class="nav-icon fa fa-hand-o-up"></i>
+<!--                        <i class="nav-icon fa fa-hand-o-up"></i>-->
                         <p>
-                            新品上线配置
+                            新品上市管理
                         </p>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a th:href="@{/admin/indexConfigs?configType=5}"
                        th:class="${path}=='INDEX_GOODS_RECOMMOND'?'nav-link active':'nav-link'">
-                        <i class="nav-icon fa fa-hand-o-up"></i>
+<!--                        <i class="nav-icon fa fa-hand-o-up"></i>-->
                         <p>
-                            为你推荐配置
+                            为你推荐管理
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-header">商品信息</li>
+                <li class="nav-item">
+                    <a th:href="@{/admin/goods/edit}" th:class="${path}=='goods-edit'?'nav-link active':'nav-link'">
+                        <!--                        <i class="nav-icon fa fa-plus"></i>-->
+                        <p>
+                            商品信息编辑
                         </p>
                     </a>
                 </li>
@@ -84,7 +86,7 @@
                 <li class="nav-item">
                     <a th:href="@{/admin/categories?parentId=0&categoryLevel=1&backParentId=0}"
                        th:class="${path}=='nanShop_mall_category'?'nav-link active':'nav-link'">
-                        <i class="fa fa-list-alt nav-icon" aria-hidden="true"></i>
+<!--                        <i class="fa fa-list-alt nav-icon" aria-hidden="true"></i>-->
                         <p>
                             分类管理
                         </p>
@@ -92,7 +94,7 @@
                 </li>
                 <li class="nav-item">
                     <a th:href="@{/admin/goods}" th:class="${path}=='nanShop_mall_goods'?'nav-link active':'nav-link'">
-                        <i class="fa fa-archive nav-icon" aria-hidden="true"></i>
+<!--                        <i class="fa fa-archive nav-icon" aria-hidden="true"></i>-->
                         <p>
                             商品管理
                         </p>
@@ -100,15 +102,15 @@
                 </li>
                 <li class="nav-item">
                     <a th:href="@{/admin/users}" th:class="${path}=='users'?'nav-link active':'nav-link'">
-                        <i class="fa fa-users nav-icon" aria-hidden="true"></i>
+<!--                        <i class="fa fa-users nav-icon" aria-hidden="true"></i>-->
                         <p>
-                            会员管理
+                            用户管理
                         </p>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a th:href="@{/admin/orders}" th:class="${path}=='orders'?'nav-link active':'nav-link'">
-                        <i class="fa fa-money nav-icon" aria-hidden="true"></i>
+<!--                        <i class="fa fa-money nav-icon" aria-hidden="true"></i>-->
                         <p>
                             订单管理
                         </p>
@@ -118,13 +120,13 @@
                 <li class="nav-item">
                     <a th:href="@{/admin/profile}"
                        th:class="${path}=='profile'?'nav-link active':'nav-link'">
-                        <i class="fa fa-user-secret nav-icon"></i>
+<!--                        <i class="fa fa-user-secret nav-icon"></i>-->
                         <p>修改密码</p>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a th:href="@{/admin/logout}" class="nav-link">
-                        <i class="fa fa-sign-out nav-icon"></i>
+<!--                        <i class="fa fa-sign-out nav-icon"></i>-->
                         <p>安全退出</p>
                     </a>
                 </li>
